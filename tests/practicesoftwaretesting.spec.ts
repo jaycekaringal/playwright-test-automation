@@ -1,20 +1,11 @@
-import { test, expect } from '@playwright/test';
+import { test, expect, Page } from '@playwright/test';
 
 const adminEmail = process.env.ADMIN_EMAIL ?? '';
 const adminPassword = process.env.ADMIN_PASSWORD ?? '';
 const customerEmail = process.env.CUSTOMER_EMAIL ?? '';
 const customerPassword = process.env.CUSTOMER_PASSWORD ?? '';
 
-async function login(page: Parameters<typeof test>[0]['page'], email: string, password: string) {
-  await page.goto('/');
-
-  await page.getByText('Sign in').click();
-  await page.locator('#email').fill(email);
-  await page.locator('#password').fill(password);
-  await page.locator('input[type="submit"]').click();
-}
-
-async function expectLoginFormVisible(page: Parameters<typeof test>[0]['page']) {
+async function expectLoginFormVisible(page: Page) {
   await expect(page.locator('#email')).toBeVisible();
   await expect(page.locator('#password')).toBeVisible();
   await expect(page.locator('input[type="submit"]')).toBeVisible();

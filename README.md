@@ -31,12 +31,20 @@ For GitHub, prefer GitHub Actions secrets or repository/environment secrets inst
 
 ## Run tests
 
+Playwright specs:
+
 ```bash
 npm test
 ```
 
 ```bash
 npm run test:headed
+```
+
+BDD (Cucumber) feature files:
+
+```bash
+npm run test:bdd
 ```
 
 ## Project structure

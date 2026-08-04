@@ -1,7 +1,11 @@
 import { Page, expect } from '@playwright/test';
 
 export class ProductPage {
-  constructor(private page: Page) {}
+  private page: Page;
+
+  constructor(page: Page) {
+    this.page = page;
+  }
 
   async addToCart() {
     await this.page.getByRole('button', { name: /add to cart/i }).click();

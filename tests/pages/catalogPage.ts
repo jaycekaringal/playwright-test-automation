@@ -1,7 +1,11 @@
 import { Page, expect } from '@playwright/test';
 
 export class CatalogPage {
-  constructor(private page: Page) {}
+  private page: Page;
+
+  constructor(page: Page) {
+    this.page = page;
+  }
 
   async openCategory(category: string) {
     await this.page.getByRole('button', { name: /categories/i }).click();
