@@ -1,3 +1,5 @@
+# Run all BDD tests: npm run test:bdd
+# Just this file: npx cucumber-js tests/features/login.feature
 Feature: Login flow
   As a customer
   I want to sign in with my credentials
