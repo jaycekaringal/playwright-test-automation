@@ -1,3 +1,5 @@
+# Run all BDD tests: npm run test:bdd
+# Just this file: npx cucumber-js tests/features/catalog.feature
 Feature: Catalog shopping flow
   As a customer
   I want to browse the catalog and purchase an item
