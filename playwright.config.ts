@@ -6,6 +6,7 @@ dotenv.config({ path: path.resolve(__dirname, '.env') });
 
 export default defineConfig({
   testDir: './tests',
+  testMatch: ['**/*.spec.ts'],
   timeout: 30_000,
   expect: {
     timeout: 10_000,
