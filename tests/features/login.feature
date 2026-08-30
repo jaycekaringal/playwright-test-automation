@@ -11,6 +11,7 @@ Feature: Login flow
     Then the login form should accept the "<role>" values
 
     Examples:
-      | role     |
-      | admin    |
-      | customer |
+      | role      |
+      | admin     |
+      | customer  |
+      | customer2 |

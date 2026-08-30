@@ -14,6 +14,10 @@ const credentialsByRole: Record<string, { email: string; password: string }> = {
     email: process.env.CUSTOMER_EMAIL ?? '',
     password: process.env.CUSTOMER_PASSWORD ?? '',
   },
+  customer2: {
+    email: process.env.CUSTOMER2_EMAIL ?? '',
+    password: process.env.CUSTOMER2_PASSWORD ?? '',
+  },
 };
 
 function credentialsFor(role: string) {

@@ -21,7 +21,13 @@ export default defineConfig({
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      use: {
+        ...devices['Desktop Chrome'],
+        launchOptions: {
+          executablePath: process.env.CHROMIUM_EXECUTABLE_PATH
+            ?? '/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell',
+        },
+      },
     },
   ],
   reporter: [['list'], ['html', { open: 'never' }]],
